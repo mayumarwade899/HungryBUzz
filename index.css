@@ -32,6 +32,27 @@
     font-weight: 500;
 }
 
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.filter .filter-btn {
+    padding: 10px;
+    background-color: #02060c;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.filter .filter-btn:hover {
+    background-color: rgba(6, 15, 28, 0.945);
+}
+
 .search-bar {
     padding: 20px;
     display: flex;
