@@ -226,10 +226,19 @@
     background-color: beige;
 }
 
-.user-card h1 {
-    font-size: 20px;
+.user-card img {
+    height: 60px;
+    border-radius: 50%;
 }
 
 .user-card h2 {
     font-size: 20px;
+    margin: 8px;
+}
+
+.online-status {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100%;
+    color: red;
 }

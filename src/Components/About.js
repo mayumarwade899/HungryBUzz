@@ -12,7 +12,7 @@ const About = () => {
         tick. It's what makes us get out of bed and say, "Let's do this."
       </p>
       {/* <User name={"Mayur Marwade"} location={"Hyderabad"} contact={"@mayugithub899"}/> */}
-      <UserClass name={"Mayur Marwade"} location={"Hyderabad"} contact={"@mayugithub899"}/>
+      <UserClass name={"Mayur Marwade"} location={"Hyderabad"} company={"@mayugithub899"}/>
     </div>
   );
 };
