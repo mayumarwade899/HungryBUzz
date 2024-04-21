@@ -15,13 +15,29 @@ const RestaurantCard = (props) => {
       />
       <h3 className="font-bold text-lg py-1">{name}</h3>
       <div className="text-zinc-600">
-        <h4 className="text-black mb-[2px]">{cuisines && cuisines.join(", ")}</h4>
+        <h4 className="text-black mb-[2px]">
+          {cuisines && cuisines.join(", ")}
+        </h4>
         <h4 className="mb-[2px]">⭐{avgRating} stars</h4>
         <h4 className="mb-[2px]">{sla?.slaString}</h4>
         <h4>{costForTwo}</h4>
       </div>
     </div>
   );
+};
+
+// Higher Order Function
+// Input - RestaurantCard ==> RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-slate-900 text-white">Promoted</label>
+        <RestaurantCard {...props}/>
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;

@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
@@ -9,6 +9,8 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+  const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
+  console.log(listOfRestaurant);
   // const arr =useState(restList)
   // // const [listOfRestaurant, setListOfRestaurant] = arr;
   // const listOfRestaurant = arr[0];
@@ -64,7 +66,8 @@ const Body = () => {
         </button>
       </div>
       <div className="flex justify-center p-4">
-        <input className="p-3 w-1/5 text-lg font-semibold border-2 border-gray-900 rounded-sm" 
+        <input
+          className="p-3 w-1/5 text-lg font-semibold border-2 border-gray-900 rounded-sm"
           type="text"
           placeholder="Search..."
           value={searchText}
@@ -72,7 +75,8 @@ const Body = () => {
             setSearchText(e.target.value);
           }}
         />
-        <button className="text-2xl text-white w-20 bg-slate-900 ml-3 hover:bg-slate-800 rounded-sm"
+        <button
+          className="text-2xl text-white w-20 bg-slate-900 ml-3 hover:bg-slate-800 rounded-sm"
           type="submit"
           onClick={() => {
             const filteredRestaurant = listOfRestaurant.filter((res) =>
@@ -91,7 +95,11 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurant/" + restaurant.info.id}
           >
-            <RestaurantCard restData={restaurant} />
+            {restaurant.info.promoted ? (
+              <PromotedRestaurantCard restData={restaurant}/>
+            ) : (
+              <RestaurantCard restData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
