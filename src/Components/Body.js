@@ -35,9 +35,9 @@ const Body = () => {
 
   if (onlineStatus === false)
     return (
-      <h1 className="online-status">
+      <h1 className="text-center mt-12 mb-[100%] text-red-600 text-xl">
         Looks like you're offline!!! <br></br> Please check your internet
-        connection.
+        connection😵.
       </h1>
     );
 
@@ -49,7 +49,7 @@ const Body = () => {
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
+    <div className="mb-11">
       <div className="flex justify-center mt-5">
         <button
           className="p-3 font-semibold rounded-md bg-slate-900 text-white hover:bg-slate-800"

@@ -3,7 +3,7 @@ import UserClass from "./UserClass";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="mb-[100%]">
       <h1>Welcome to HungryBuzz World!🍔</h1> <br></br>
       <h3>Mission: </h3>
       <p>
