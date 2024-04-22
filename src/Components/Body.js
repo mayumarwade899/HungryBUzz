@@ -1,8 +1,9 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
+import UserContext from "../Utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -48,6 +49,8 @@ const Body = () => {
   //   return <Shimmer />;
   // }
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
@@ -64,6 +67,15 @@ const Body = () => {
         >
           Top Rated Restaurant
         </button>
+      </div>
+      <div className="flex justify-center mt-5">
+        <label className="text-xl font-bold">UserName : </label>
+        <input
+          className="p-1 w-1/5 text-lg font-semibold border-2 border-gray-900 rounded-sm"
+          value={loggedInUser}
+          onChange={(e) => setUserName(e.target.value)}
+          type="text"
+        />
       </div>
       <div className="flex justify-center p-4">
         <input
@@ -96,7 +108,7 @@ const Body = () => {
             to={"/restaurant/" + restaurant.info.id}
           >
             {restaurant.info.promoted ? (
-              <PromotedRestaurantCard restData={restaurant}/>
+              <PromotedRestaurantCard restData={restaurant} />
             ) : (
               <RestaurantCard restData={restaurant} />
             )}
