@@ -24,14 +24,14 @@ const ItemList = ({ items }) => {
           </div>
           <div className="w-2/12">
             <div className="absolute">
-              <button className="text-green-600 font-bold bg-white p-[6px] shadow-lg w-16 rounded-md hover:bg-gray-300 relative top-[88px] left-[25px]">
+              <button className="text-green-600 font-bold bg-white p-[6px] shadow-lg w-16 rounded-md hover:bg-gray-300 relative ">
                 ADD
               </button>
             </div>
             <div>
               <img
                 src={CDN_URL + item.card.info.imageId}
-                className="w-full rounded-lg mb-5"
+                className="w-full rounded-lg"
               />
             </div>
           </div>
