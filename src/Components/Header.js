@@ -35,7 +35,9 @@ const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li>
-            <i class="fa-solid fa-cart-shopping"></i>[{cartItems.length}]
+            <Link to="/cart">
+              <i class="fa-solid fa-cart-shopping"></i>[{cartItems.length}]
+            </Link>
           </li>
           <button
             className="h-10 px-6 font-semibold rounded-md bg-slate-900 text-white pb-2 hover:bg-slate-800"
