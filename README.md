@@ -17,3 +17,5 @@
   - Install Babel dependencies (npm install --save-dev babel-jest @babel/core @babel/preset-env)
   - Configure babel
   - configure parcel config file to disable default Babel transpilation in Parcel
+  - Jest configuration (npx jest --init)
+  - Install jsdom library
