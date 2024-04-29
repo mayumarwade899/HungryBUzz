@@ -10,7 +10,7 @@ const RestaurantCard = (props) => {
     restData?.info;
 
   return (
-    <div className="m-4 p-4 w-[250px] ml-[34px] bg-gray-100 rounded-md shadow-md shadow-gray-400 transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-110 hover:duration-300">
+    <div data-testid="resCard" className="m-4 p-4 w-[250px] ml-[34px] bg-gray-100 rounded-md shadow-md shadow-gray-400 transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-110 hover:duration-300">
       <img
         className="rounded-lg w-[100%] h-[180px]"
         alt="res-img"

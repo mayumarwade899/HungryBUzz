@@ -98,7 +98,8 @@ const Body = () => {
             setFilteredRestaurant(filteredRestaurant);
           }}
         >
-          <i class="fa-solid fa-magnifying-glass"></i>
+          {/* <i class="fa-solid fa-magnifying-glass"></i> */}
+          Search
         </button>
       </div>
       <div className="flex flex-wrap">
